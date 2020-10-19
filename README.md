@@ -2,12 +2,8 @@
 # **PHP_projet**
 
 Projet PHP
-___
-  
-## **V.10.19.16 :**
 
-___
-  
+## **V.10.19.16 :**
 
 - Création des fichiers :
 
@@ -33,21 +29,14 @@ ___
 
 ## **V.10.19.14 :**
 
-___
-
 - On a mis les thèmes pipouuuuuux, pour pouvoir travailler efficacement, ainsi que pour nous porter espoir et prospérité.
 
-
 ## **V.10.19.13.2 :**
-
-___
   
 - Fix rapide de l'orthographe du readme
   
 ## **V.10.19.13 :**
 
-___
-  
 - Début du projet
 
 ___
