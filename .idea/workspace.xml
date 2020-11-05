@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5920b05d-cff6-4ec4-9c9c-82cc45d12da3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/assets/config/dbconnect.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/design/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/include/functions.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lire-news.php" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1jpnMlPrYoCA8hAmPDiqx9FvKWl" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.SQL" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" nameIsGenerated="true" port="9229">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5920b05d-cff6-4ec4-9c9c-82cc45d12da3" name="Default Changelist" comment="" />
+      <created>1604509856276</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604509856276</updated>
+      <workItem from="1604509858993" duration="25796000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="336" y="361" key="#SQL_Dialects" timestamp="1604519286088">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="336" y="361" key="#SQL_Dialects/-1824.36.1824.996/0.0.1920.1040@0.0.1920.1040" timestamp="1604519286088" />
+    <state x="764" y="174" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604535073069">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="764" y="174" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1824.36.1824.996/0.0.1920.1040@0.0.1920.1040" timestamp="1604535073069" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604514964405">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1824.36.1824.996/0.0.1920.1040@0.0.1920.1040" timestamp="1604514964405" />
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1604510052087">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/-1824.36.1824.996/0.0.1920.1040@0.0.1920.1040" timestamp="1604510052087" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1604510052087">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.0.center/-1824.36.1824.996/0.0.1920.1040@0.0.1920.1040" timestamp="1604510052087" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1604510052087">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.0.left/-1824.36.1824.996/0.0.1920.1040@0.0.1920.1040" timestamp="1604510052087" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1604510052087">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.0.right/-1824.36.1824.996/0.0.1920.1040@0.0.1920.1040" timestamp="1604510052087" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1604510052088">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/-1824.36.1824.996/0.0.1920.1040@0.0.1920.1040" timestamp="1604510052088" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1604510052088">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/-1824.36.1824.996/0.0.1920.1040@0.0.1920.1040" timestamp="1604510052088" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1604510052088">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/-1824.36.1824.996/0.0.1920.1040@0.0.1920.1040" timestamp="1604510052088" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1604510052088">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/-1824.36.1824.996/0.0.1920.1040@0.0.1920.1040" timestamp="1604510052088" />
+    <state width="1877" height="348" key="GridCell.Tab.2.bottom" timestamp="1604510052088">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.2.bottom/-1824.36.1824.996/0.0.1920.1040@0.0.1920.1040" timestamp="1604510052088" />
+    <state width="1877" height="348" key="GridCell.Tab.2.center" timestamp="1604510052088">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.2.center/-1824.36.1824.996/0.0.1920.1040@0.0.1920.1040" timestamp="1604510052088" />
+    <state width="1877" height="348" key="GridCell.Tab.2.left" timestamp="1604510052088">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.2.left/-1824.36.1824.996/0.0.1920.1040@0.0.1920.1040" timestamp="1604510052088" />
+    <state width="1877" height="348" key="GridCell.Tab.2.right" timestamp="1604510052088">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.2.right/-1824.36.1824.996/0.0.1920.1040@0.0.1920.1040" timestamp="1604510052088" />
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1604514973369">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="794" y="443" key="NewPhpFileDialog/-1824.36.1824.996/0.0.1920.1040@0.0.1920.1040" timestamp="1604514973369" />
+    <state x="719" y="150" key="SettingsEditor" timestamp="1604526076191">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="719" y="150" key="SettingsEditor/-1824.36.1824.996/0.0.1920.1040@0.0.1920.1040" timestamp="1604526076191" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1604528866915">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/-1824.36.1824.996/0.0.1920.1040@0.0.1920.1040" timestamp="1604528866914" />
+    <state x="396" y="218" width="532" height="454" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1604522711419">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="396" y="218" width="532" height="454" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/-1824.36.1824.996/0.0.1920.1040@0.0.1920.1040" timestamp="1604522711419" />
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604535617733">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1824.36.1824.996/0.0.1920.1040@0.0.1920.1040" timestamp="1604535617733" />
+    <state x="1265" y="236" key="refactoring.ChangeSignatureDialog" timestamp="1604518397502">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1265" y="236" key="refactoring.ChangeSignatureDialog/-1824.36.1824.996/0.0.1920.1040@0.0.1920.1040" timestamp="1604518397502" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1604533496390">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-1824.36.1824.996/0.0.1920.1040@0.0.1920.1040" timestamp="1604533496390" />
+  </component>
+</project>
