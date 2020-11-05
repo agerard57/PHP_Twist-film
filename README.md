@@ -11,21 +11,41 @@ Projet PHP
 .
 ├── .git
 │   └── ...
+├── .idea
+│   └── ...
 ├── assets
 │   ├── config
-│   │   ├── dbconnect.php
+│   │   └── dbconnect.php
+│   ├── controllers
+│   │   └── controlleur_accueil.php
 │   ├── design
-│   │   ├── style.css
-│   ├── include
-│   └── ── functions.php
+│   │   └── style.css
+│   ├── errors
+│   │   └── erreur.php
+│   ├── medias
+│   │   ├── affiches
+│   │   │   └── ...
+│   │   ├── bannieres
+│   │   │   └── ...
+│   │   ├── favicon.ico
+│   │   └── logo.jpg
+│   ├── models
+│   │   └── dbconnect.php
+│   ├── vues
+│   └────── functions.php
 ├── LICENSE
 ├── README.md
-├── lire-news.php
+├── .htaccess
 └── index.php
 ```
 
 - Finition de ***dbconnect.php***
 - Ajout de 3 fonctions dans ***fetchNews***
+
+## **V.11.05.19 :**
+
+- Ajout d'un index fonctionnel (TODO : CSS)
+- Ajout d'un jeu dans la BDD
 
 ## **V.10.19.14 :**
 
