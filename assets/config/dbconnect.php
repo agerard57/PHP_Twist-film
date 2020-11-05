@@ -1,10 +1,10 @@
 <?php
 
-$objPdo = null;
 $db_config = array();
 $db_config['SGBD'] = 'mysql';
 $db_config['DB_NAME'] = 'gerard326u_projet_php';
-$db_config['CHARSET'] = 'utf-8';
+$db_config['CHARSET'] = $options = array(
+                        PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
 
 //BDD LocalHost
 //$db_config['HOST'] = 'localhost';
@@ -20,7 +20,7 @@ $db_config['PASSWORD'] = '3630';
 
 try
 {
-    $objPdo = new PDO($db_config['SGBD'] .':host='. $db_config['HOST'] .';dbname='.$db_config['DB_NAME'], $db_config['USER'], $db_config['PASSWORD'], $db_config['CHATSET']);
+    $objPdo = new PDO($db_config['SGBD'] .':host='. $db_config['HOST'] .';dbname='.$db_config['DB_NAME'], $db_config['USER'], $db_config['PASSWORD'], $db_config['CHARSET']);
 }
 catch( Exception $exception )
 {

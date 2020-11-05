@@ -1,9 +1,46 @@
+<!-- Page d'erreur -->
+<?php
+
+$status = $_GET['erreur']
+;
+    $codes = array(
+    400 => array('400', 'Mauvaise Requête',
+    'Une mauvaise syntaxe vous a amené ici'),
+    403 => array('403', 'Interdiction', 'Le serveur à interdit votre requête.'),
+    404 => array('404', 'Non Trouvé',
+    'La page demandée ne peut pas être trouvé dans le serveur.'),
+    405 => array('405', 'Method Non Autorisée',
+    'La méthode spécifiée dans la requête ne peut être alloué.'),
+    408 => array('408', 'Temps Imparti',
+    'Votre navigateur ne pû envoyer une requête dans les temps impartis.'),
+
+    500 => array('500', 'Erreur de Serveur Interne',
+    'Une condition du serveur rends impossible la connexion'),
+    502 => array('502', 'Erreur Paserelle',
+    'Le serveur à eu une réponse invalide à votre requête.'
+    ),
+    504 => array('504', 'Temps Imparti Passerelle',
+    'Le serveur à eu une réponse dans le temps imparti à votre requête.'),
+    );
+    
+    $titre = $codes[$status][0];
+    $nom = $codes[$status][1];
+    $message = $codes[$status][2];
+    
+if ($titre == false || strlen($status) != 3) {
+    $titre = "???";
+    $message = 'Le code status donné est faux.';
+}
+?>
+
 <div class="containererror">
     <div class="error">
-        <h1>500</h1>
-        <h2>erreur</h2>
-        <p>Oh-oh, quelque chose ne va pas... Il est possible que la fonctionnalité désirée ne puisse pas fonctionner sans réel support en ligne (sans .PhP ou BDD)!
-        </p>
+        <?php
+        echo'<h1>'.$titre.'</h1>';
+        echo'<h2>'.$nom.'</h2>';
+        echo'<p>'.$message.'</p>';
+?>
+        <p><a href="/PHP_projet/">Retour au menu</a></p>
     </div>
     <div class="stack-container">
         <div class="card-container">

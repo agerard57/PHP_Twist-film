@@ -1,0 +1,9 @@
+ErrorDocument 400 /PHP_projet/assets/errors/erreur.php/?erreur=400
+ErrorDocument 403 /PHP_projet/assets/errors/erreur.php/?erreur=403
+ErrorDocument 404 /PHP_projet/assets/errors/erreur.php/?erreur=404
+ErrorDocument 505 /PHP_projet/assets/errors/erreur.php/?erreur=405
+ErrorDocument 408 /PHP_projet/assets/errors/erreur.php/?erreur=408
+
+ErrorDocument 500 /PHP_projet/assets/errors/erreur.php/?erreur=500
+ErrorDocument 502 /PHP_projet/assets/errors/erreur.php/?erreur=502
+ErrorDocument 503 /PHP_projet/assets/errors/erreur.php/?erreur=503

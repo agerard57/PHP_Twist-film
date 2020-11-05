@@ -3,6 +3,10 @@
 /*                Ctrl + F5                  */
 /*-------------------------------------------*/
 
+img{
+    width: 100px;
+    height: auto;
+}
 body {
     text-align: center;
     background: url(../../media/back.jpg) top center repeat-y;
