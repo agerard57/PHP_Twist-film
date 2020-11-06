@@ -1,4 +1,5 @@
 <?php
+$title="Le twist du film";
 
     include_once (dirname(__FILE__).'/../config/dbconnect.php');
 
@@ -11,18 +12,6 @@
         echo'<p>'.$previsutexte.' <a href="../controllers/controlleur_article.php?idnews=">Lire la suite...</a></p>';
     }
 
-    function getTheme() // Get une news avec l'id différent du news actuel
-    {
-        global $objPdo;
-        $requete = $objPdo->prepare("
-            SELECT *
-            FROM theme t
-            ORDER BY t.description ASC");
-
-    $requete->execute();
-
-    return $requete;
-    }
 
     function getNewsMenu() // Get une news avec l'id différent du news actuel
     {
@@ -39,22 +28,19 @@
         return $requete;
     }
 
-    function getNews() // Get une news avec l'id différent du news actuel
+    function getTheme() // Get une news avec l'id différent du news actuel
     {
         global $objPdo;
         $requete = $objPdo->prepare("
-                SELECT n.idnews, n.titrenews, n.textenews, n.datenews, CONCAT( r.nom,' ', r.prenom) AS redacteur
-                FROM news n, redacteur r 
-                WHERE n.idredacteur = r.idredacteur 
-                ORDER BY n.datenews DESC
-                LIMIT 5");
+                SELECT *
+                FROM theme t
+                ORDER BY t.description ASC");
 
         $requete->execute();
 
         return $requete;
     }
-
-    function getAnnee() // Rapporte les news
+function getAnnee() // Rapporte les news
     {
         global $objPdo;
         $requete = $objPdo->prepare("
@@ -107,7 +93,20 @@
     WHERE n.idredacteur = r.idredacteur
     ORDER BY n.idnews DESC
     AND n.idnews = ? ");
+function getNews() // Get une news avec l'id différent du news actuel
+    {
+        global $objPdo;
+        $requete = $objPdo->prepare("
+                SELECT n.idnews, n.titrenews, n.textenews, n.datenews, CONCAT( r.nom,' ', r.prenom) AS redacteur
+                FROM news n, redacteur r
+                WHERE n.idredacteur = r.idredacteur
+                ORDER BY n.datenews DESC
+                LIMIT 5");
 
+        $requete->execute();
+
+        return $requete;
+    }
             return $requete->execute(array($idnews)) ? $requete->fetchAll() : false;
         }
 

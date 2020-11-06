@@ -2,19 +2,30 @@
 /*      En cas de bug de refresh du css      */
 /*                Ctrl + F5                  */
 /*-------------------------------------------*/
+html{
+    cursor: url("../medias/clap.cur"), pointer;
+}
+html:active {
+    cursor: url('../medias/clapped.cur'), auto;
+}
 
 img{
     width: 100px;
     height: auto;
+    float: left;
 }
+
 body {
-    text-align: center;
-    background: url(../../media/back.jpg) top center repeat-y;
     background-color: #2f2f2f;
     font-family: Arial;
     color: #ffffff;
     line-height: 1.5em;
     font-size: 14px;
+    display: block;
+    margin: 0 0 0 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+
 }
 
 a:link,
@@ -23,59 +34,92 @@ a:visited {
 }
 
 a:hover {
-    color: #3ebcef;
-}
-
-#wrapper {
-    margin: auto;
-    width: 778px;
-    text-align: left;
-    padding-left: 1px;
+    cursor: url("../medias/clapselec.cur"), pointer;
 }
 
 
+.contenu{
+    text-align: center;
+}
 /* ......................................Top Nav........................................................... */
 
-#nav {
-    margin-bottom: 0;
-    padding: 0;
+header {
+    background-color: #28314e;
 }
 
-ul#menu {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    position: relative;
-    display: block;
-    height: 40px;
-    font-size: 13px;
-    font-weight: bold;
-    background-color: #333333;
+body {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-#menu li {
-    display: block;
-    float: left;
-    margin: 0;
-    padding: 0;
-}
-
-#menu li a {
-    display: block;
-    float: left;
-    color: #FFFFFF;
+a {
     text-decoration: none;
-    font-weight: bold;
-    padding: 11px 20px 0 20px;
-    height: 29px;
+}
+
+nav {
+    font-family: monospace;
+}
+
+ul {
+    background: darkorange;
+    list-style: none;
     margin: 0;
-    border-right: 1px solid #474646;
+    padding-left: 0;
 }
 
-#menu li a:hover {
-    background-color: #e3007a;
+li {
+    color: #fff;
+    background: darkorange;
+    display: block;
+    float: left;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+
 }
 
+li a {
+    color: #fff;
+}
+
+li:hover,
+li:focus-within {
+    background: red;
+    cursor: url("../medias/clap.cur"), pointer;
+
+}
+
+li:focus-within a {
+    outline: none;
+}
+
+ul li ul {
+    background: orange;
+    visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    left: 0;
+    display: none;
+    cursor: url("../medias/clap.cur"), pointer;
+
+}
+
+ul li:hover > ul,
+ul li:focus-within > ul,
+ul li ul:hover,
+ul li ul:focus {
+    visibility: visible;
+    opacity: 1;
+    display: block
+}
+
+ul li ul li {
+    clear: both;
+    width: 100%;
+}
 
 /* ......................................Content........................................................... */
 
@@ -85,12 +129,11 @@ ul#menu {
 
 h1 {
     color: #CCCCCC;
-    background: url(../../media/headline_back.jpg) top left no-repeat;
-    padding-top: 5px;
     height: 53px;
     font-size: 30px;
     letter-spacing: 5px;
-    margin: 40px 0 20px 0;
+    margin: 0 0 0 0;
+    float: left;
 }
 
 h2 {
