@@ -3,8 +3,6 @@
     $title="Le twist du film";
 
     include_once (dirname(__FILE__).'/../config/dbconnect.php');
-    include_once (dirname(__FILE__).'/modele_header.php');
-
 
 
     //GETTERS-----------------------------------------------------------------------------------------------------------
@@ -28,7 +26,7 @@
 
 
 
-    //Autres focntions--------------------------------------------------------------------------------------------------
+    //Autres focctions--------------------------------------------------------------------------------------------------
 
     function article()
     {
@@ -64,60 +62,71 @@
         $texte_tronque = mb_substr($texte_espaces, 0, mb_strpos($texte_espaces, ' ', 200));//empèche de tronquer si il n'y a pas d'espace
         $previsutexte = trim(mb_substr($texte_tronque, 0, mb_strrpos($texte_tronque, ' '))).'...';
 
-        echo'<p class="textedesc">'.$previsutexte.' <a href="../controllers/controlleur_article.php?idnews='.$idnews.'">Lire la suite...</a></p>';
+        echo'<p class="textedesc">'.$previsutexte.' <a href="../../assets/controllers/controlleur_article.php?idnews='.$idnews.'">Lire la suite...</a></p>';
     }
 
 
 
-    function slide()
-    {
+    function slide(){
+
         $news = getNewsMenu(4);
-        $id = 0;
-        global $idnews;
 
         foreach($news as $row)
         {
-            $titre = $row['titrenews'];
+            $visu=$row["titrenews"];
             $visuelchar = " (";
-
-                $id++;
-
-            echo'<a href="../controllers/controlleur_article.php?idnews='.$idnews.'"><div class="mesSlides fade">';
-                echo '<div class="nombretext">'.$id.' / 4</div>';
-                echo visuel($titre, $visuelchar, "bannieres", false, null);
-                echo '<div class="texte">'.$titre.'</div>';
-            echo'</div></a>';
-
+            echo visuel($visu, $visuelchar, "bannieres", false, null);
 
         }
-
     }
 
 
 
-    function visuel($str, $char, $type, $article, $idnews)
+function enleveaccents ($string) {
+$table = array(
+    'Š'=>'S', 'š'=>'s', 'Đ'=>'Dj', 'đ'=>'dj', 'Ž'=>'Z', 'ž'=>'z', 'Č'=>'C', 'č'=>'c', 'Ć'=>'C', 'ć'=>'c',
+    'À'=>'A', 'Á'=>'A', 'Â'=>'A', 'Ã'=>'A', 'Ä'=>'A', 'Å'=>'A', 'Æ'=>'A', 'Ç'=>'C', 'È'=>'E', 'É'=>'E',
+    'Ê'=>'E', 'Ë'=>'E', 'Ì'=>'I', 'Í'=>'I', 'Î'=>'I', 'Ï'=>'I', 'Ñ'=>'N', 'Ò'=>'O', 'Ó'=>'O', 'Ô'=>'O',
+    'Õ'=>'O', 'Ö'=>'O', 'Ø'=>'O', 'Ù'=>'U', 'Ú'=>'U', 'Û'=>'U', 'Ü'=>'U', 'Ý'=>'Y', 'Þ'=>'B', 'ß'=>'Ss',
+    'à'=>'a', 'á'=>'a', 'â'=>'a', 'ã'=>'a', 'ä'=>'a', 'å'=>'a', 'æ'=>'a', 'ç'=>'c', 'è'=>'e', 'é'=>'e',
+    'ê'=>'e', 'ë'=>'e', 'ì'=>'i', 'í'=>'i', 'î'=>'i', 'ï'=>'i', 'ð'=>'o', 'ñ'=>'n', 'ò'=>'o', 'ó'=>'o',
+    'ô'=>'o', 'õ'=>'o', 'ö'=>'o', 'ø'=>'o', 'ù'=>'u', 'ú'=>'u', 'û'=>'u', 'ý'=>'y', 'ý'=>'y', 'þ'=>'b',
+    'ÿ'=>'y', 'Ŕ'=>'R', 'ŕ'=>'r',
+    );
+
+return strtr($string, $table);
+}
+
+
+function visuel($str, $char, $type, $article, $idnews)
     {
         $visu = substr($str, 0, strrpos($str, $char));
         $visu = trim($visu);                                             // simple trim
         $visu = strtolower($visu);                                       // mise en minuscule
         $visu = str_replace(' ', '_', $visu);                            // les espaces deviennent _
         $visu = str_replace(str_split('\\/:\'`*?"<>|(),'), '', $visu);   // remplace \/:'`*?"<>|()
-        $visu = iconv('UTF-8','ASCII//TRANSLIT', $visu);                 // remplace tous les char spéciaux
+        $visu = enleveaccents($visu);                 // remplace tous les char spéciaux
 
         if($article == true)
         {
-            echo'<a href="../controllers/controlleur_article.php?idnews='.$idnews.'"><img class='.$type.' src="assets/medias/'.$type.'/'.$visu.'.jpg">  <img/></a>';
+            str_replace("\\","/",dirname(__FILE__));
+            echo'<a href="../../assets/controllers/controlleur_article.php?idnews='.$idnews.'"><img class='.$type.' src="assets/medias/'.$type.'/'.$visu.'.jpg">  <img/></a>';
         }
-        else
+    else if($article == false && $idnews != null)
         {
-            echo'<img class="imgbanniere" src="assets/medias/'.$type.'/'.$visu.'.jpg"> <img/>';
+            echo'<img class="imgbanniere" src="../../assets/medias/'.$type.'/'.$visu.'.jpg"> <img/>';
         }
+    else{
+        echo'<img class="mesSlides fading" src="assets/medias/bannieres/'.$visu.'.jpg"> <img/>';
+
+    }
 
     }
 
 
 
 ?>
+
 
 
 

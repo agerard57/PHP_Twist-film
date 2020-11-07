@@ -1,56 +1,102 @@
-<!DOCTYPE html>
 <html lang="fr" xmlns="http://www.w3.org/1999/html">
+    <head>
+        <link href="/PHP_projet/assets/design/style.css" media="all" rel="stylesheet" type="text/css"/>
+        <?php
+        include_once (dirname(__FILE__).'/../config/dbconnect.php');
+        include_once (dirname(__FILE__).'/../modeles/modele_header.php');
+        ?>
+    </head>
 
-    <!-- /*http://wordpress.la-fin-du-film.com/ Faire leur barre de recherche*/ -->
+    <header>
 
+        <div id="bg-color-header">
 
-    <body onload="slideActuelle(1)">
+            <img src="assets/medias/logo.png" src="assets/medias/logo.png">
 
-    </br>
+            <h1 id="titre">Le twist du film</h1>
 
-    <!--      http://wordpress.la-fin-du-film.com/buried-2010/585/ -->
-    <div class="contenu">
+            <nav role="navigation">
+                <ul>
+                    <li><a href="index.php" >Menu</a></li>
+                    <li><a href="/PHP_projet/assets/controllers/controlleur_listearticles.php" >Tous les articles</a></li>
+                    <li><a aria-haspopup="true">Par thème</a>
+                        <ul class="dropdown" aria-label="submenu">
+                            <?php
+                            $table = getTheme();
+                            $trie = "description";
+                            foreach_liste($table, $trie, 1);
+                            ?>
+                        </ul>
+                    </li>
+                    <li><a aria-haspopup="true">Par année de publication</a>
+                        <ul class="dropdown" aria-label="submenu">
+                            <?php
+                            $table = getAnnee();
+                            $trie = "annee";
+                            foreach_liste($table, $trie, 1);
+                            ?>
+                        </ul>
+                    </li>
+                    <li><a href="/PHP_projet/assets/controllers/sinscrire.php">S'inscrire</a></li>
+                    <li><a href="/PHP_projet/assets/controllers/seconnecter.php">Se connecter</a></li>
+                    <li><a href="/PHP_projet/assets/vues/vue_about.php">A propos ...</a></li>
+                </ul>
+            </nav>
 
-
-        <div class="zigzag"></div>
-        <p class="tag">Les <em><b>spoilers</b></em> à l'affiche</p>
-        <div class="zigzag"></div>
-
-
-        <div class="conteneur-slideshow">
-
-            <a href="../controllers/controlleur_article.php?idnews='.$idnews.'"><div class="mesSlides fade">
-                visuel($titre, $visuelchar, "bannieres", false);
-                </div>
-            <?php
-                slide();
-            ?>
-
-
-            <a class="prec" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="sui" onclick="plusSlides(1)">&#10095;</a>
         </div>
-        <br>
 
+        <hr>
 
-        <div style="text-align:center">
-            <span class="dot" onclick="slideActuelle(1)"></span>
-            <span class="dot" onclick="slideActuelle(2)"></span>
-            <span class="dot" onclick="slideActuelle(3)"></span>
-        </div>
+    </header>
 
-        <div class="zigzag"></div>
-        <p class="tag">Nos <em><b>spoilers</b></em> les plus récents</p>
-        <div class="zigzag"></div>
+    <body>
 
         </br>
 
-        <?php
-            article();
-        ?>
+        <div class="contenu">
 
-    </div>
+
+            <div class="zigzag"></div>
+            <p class="tag">Les <em><b>spoilers</b></em> à l'affiche</p>
+            <div class="zigzag"></div>
+            <div class=slide>
+
+                <div class="contenuslide" style="max-width:500px">
+                <?php
+                    slide();
+                ?>
+                </div>
+    
+            <div class="zigzag"></div>
+            <p class="tag">Nos <em><b>spoilers</b></em> les plus récents</p>
+            <div class="zigzag"></div>
+
+                </br>
+
+                <?php
+                    article();
+                ?>
+            </div>
 
     </body>
 
-</html>
+    <footer>
+        <p>Le twist du film &copy; <?= date("Y") ?> - GERARD / GIANGRECO</p>
+    </footer>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mesSlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}
+            x[myIndex-1].style.display = "block";
+            setTimeout(carousel, 9000);
+        }
+    </script>

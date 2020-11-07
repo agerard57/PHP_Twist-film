@@ -125,9 +125,11 @@ a:visited {
 a:hover {
     cursor: url("../medias/clapselec.cur"), pointer;
 }
+.contenuslide{
+    z-index:-1;
 
+}
 header {
-    padding-bottom: 80px;
     display: block;
     position: -webkit-sticky;
     position: sticky;
@@ -144,28 +146,29 @@ a {
 
 nav {
     font-family: monospace;
-    float : right
-
+    float : right;
+    padding:15px;
 }
 
 ul {
-    background: darkorange;
-    list-style: none
+    background: #28314E;
+    list-style: none;
+    padding-inline-start: 00px;
 }
 
 li {
-    color: #fff;
+    color: #A8D3E7;
     display: block;
     float: left;
     padding: 1rem;
     position: relative;
     text-decoration: none;
-    transition-duration: 0.5s
+    transition-duration: 0.5s;
 
 }
 
 li a {
-    color: #fff
+    color: #A8D3E7;
 }
 
 li:hover,
@@ -174,23 +177,28 @@ li:focus-within {
     cursor: url("../medias/clap.cur"), pointer
 
 }
+
 .tag{
     font-family: BrandonGrotesque-Bold;
     font-size: 30px;
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 10px;
-    margin: 10px 0 0 0;
-    padding: 25px 0 8px
+    margin: 0 0 21px 0;
+    padding: 7px 0 8px
 }
 
 .zigzag{
-    content:url("data:../medias/zigzag.png")
+    background: url("../medias/zigzag.png") repeat-x;
+    display: block;
+    background-size: 184px;
+    height: 55px;
 }
+
 
 em{
 font-family: PosterBodoniBT-Roman;
-color: #E9633B
+color: #28314E;
 }
 
 li:focus-within a {
@@ -198,7 +206,7 @@ li:focus-within a {
 }
 
 ul li ul {
-    background: orange;
+    background: #28314E;
     visibility: hidden;
     opacity: 0;
     min-width: 5rem;
@@ -246,129 +254,35 @@ h2 {
     letter-spacing: 3px;
 }
 
-
 .clear {
     clear: both;
 }
 
 .footer {
-    height: 50px;
-    display: none;
-}
-* {box-sizing:border-box}
-
-.conteneur-slideshow {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-    z-index:-1;
-}
-
-.mesSlides {
-    display: none;
-}
-
-.prec, .sui {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
+    height: 20px;!important;
     width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: black;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-.prec{
-left:200px;
-}
-.sui{
-right:200px;
-}
+    display: block;
+    position: fixed;
+    bottom: 0;
 
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+
 }
 
 
-.prec:hover, .sui:hover {
-    background-color: rgba(0,0,0,0.8);
+.fading{animation:fading 10s infinite}@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+
+.mesSlides{
+    width: 600px;
+    align-content: center;
+    z-index: -1;
+    height: 360px;
+    position: relative;
+    left: 100px;
+    bottom: 10px;
 }
 
-.artitres{
-    font-family: CocogooseExtraBold;
-    font-size: 16px;
-    text-transform: uppercase;
-    font-weight: normal;
-    color: #6EB0A2;
-}
-
-.metarticle{
-    color: #DD5E35;
-    text-align: center;
-    text-transform: uppercase;
-    font: bold 10px NeutraText-Book;
-    margin-top: 15px;
-}
-
-.textedesc{
-    font-family: NeutraText-Book;
-    font-size: 15px;
-}
-
-.texte {
-    font-family: NeutraText-Book;
-    text-shadow:#feffa3;
-    background: black;
-}
-
-
-.nombretext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
-
-.points {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active, .points:hover {
-    background-color: #717171;
-}
-
-
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-}
-
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-}
 footer>p{
     text-align: center;
     opacity: 60%;
 }
+

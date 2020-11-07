@@ -11,8 +11,10 @@
     ?>
 
     <title><?php echo $title; ?></title>
-    <meta charset=utf-8" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <link href="assets/design/style.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="../design/style.css" media="all" rel="stylesheet" type="text/css"/>
+
+    <meta charset=utf-8" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <link rel="icon" href="assets/medias/favicon.ico" />
 
 </head>
@@ -22,14 +24,14 @@
 
         <div id="bg-color-header">
 
-            <img src="assets/medias/logo.png">
+            <img src="../medias/logo.png" src="assets/medias/logo.png">
 
             <h1 id="titre">Le twist du film</h1>
 
             <nav role="navigation">
                 <ul>
-                    <li><a href="index.php" >Menu</a></li>
-                    <li><a href="../controllers/controlleur_listearticles.php" >Tous les articles</a></li>
+                    <li><a href="../index/index.php" >Menu</a></li>
+                    <li><a href="../../assets/controllers/controlleur_listearticles.php" >Tous les articles</a></li>
                     <li><a aria-haspopup="true">Par thème</a>
                     <ul class="dropdown" aria-label="submenu">
                         <?php
@@ -48,10 +50,10 @@
                         ?>
                     </ul>
                     </li>
-                    <li><a href="/assets/controllers/controlleur_log.php">S'inscrire / Se connecter</a></li>
-                    <li><a href="/PHP_projet/assets/errors/erreur.php?erreur=404">A propos ...</a></li>
+                    <li><a href="../../assets/controllers/sinscrire.php">S'inscrire</a></li>
+                    <li><a href="../../assets/controllers/seconnecter.php">Se connecter</a></li>
+                    <li><a href="../../assets/controllers/about.php">A propos ...</a></li>
                 </ul>
-                <img src="../medias/banner.jpg" alt="" />
             </nav>
 
         </div>

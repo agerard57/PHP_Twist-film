@@ -1,41 +1,41 @@
 <?php
 
-    include_once (dirname(__FILE__).'/../config/dbconnect.php');
+include_once (dirname(__FILE__).'/../config/dbconnect.php');
 
 
-    //GETTERS-----------------------------------------------------------------------------------------------------------
+//GETTERS-----------------------------------------------------------------------------------------------------------
 
-    function getAnnee() // Get les années du sous menu "Par année de publication"
-    {
-        global $objPdo;
+function getAnnee() // Get les années du sous menu "Par année de publication"
+{
+    global $objPdo;
 
-        $sql=
-            "SELECT DISTINCT YEAR(datenews) as annee
+    $sql=
+        "SELECT DISTINCT YEAR(datenews) as annee
                  FROM news
                  ORDER BY datenews DESC";
 
-        $requete = $objPdo->prepare($sql);
-        $requete->execute();
+    $requete = $objPdo->prepare($sql);
+    $requete->execute();
 
-        return $requete;
-    }
+    return $requete;
+}
 
 
 
-    function getTheme() // Get les thèmes du sous menu "Par thème"
-    {
-        global $objPdo;
+function getTheme() // Get les thèmes du sous menu "Par thème"
+{
+    global $objPdo;
 
-        $sql=
-            "SELECT *
+    $sql=
+        "SELECT *
                      FROM theme t
                      ORDER BY t.description ASC";
 
-        $requete = $objPdo->prepare($sql);
-        $requete->execute();
+    $requete = $objPdo->prepare($sql);
+    $requete->execute();
 
-        return $requete;
-    }
+    return $requete;
+}
 
 
 
@@ -44,14 +44,24 @@
 
 
 
-    function foreach_liste($table, $trie)
-    {
+function foreach_liste($table, $trie, $lien)
+{
+    if($lien == 1){
         foreach($table as $row)
         {
             echo '<li> <a href="assets/controllers/controlleur_listearticles.php/?'.$trie.'='.strtolower($row[$trie]).'">'.$row[$trie].'</a> </li>';
         }
     }
 
+    if($lien == 2){
+        foreach($table as $row)
+        {
+            echo '<li> <a href="../../controllers/controlleur_listearticles.php/?'.$trie.'='.strtolower($row[$trie]).'">'.$row[$trie].'</a> </li>';
+        }
+    }
+}
 
 
 ?>
+
+

@@ -8,11 +8,7 @@ if ( !empty($_GET['page'] ) && is_file('assets/controllers/'.$_GET['page'] .'.ph
 }
 else
 {
-    include 'assets/controllers/controlleur_header.php';
-
     include 'assets/controllers/controlleur_accueil.php';
-
-    include 'assets/controllers/controlleur_footer.php';
 }
 
 $objPdo=NULL;
