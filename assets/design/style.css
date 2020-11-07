@@ -7,6 +7,22 @@
     src: url(../medias/fonts/TildaPetite.otf);
 }
 @font-face {
+    font-family: Bodoni-Black;
+    src: url(../medias/fonts/Bodoni-Black.ttf);
+}
+@font-face {
+    font-family: CocogooseExtraBold;
+    font-style: normal;
+    font-weight: 100;
+    src: url(../medias/fonts/Cocogoose-Extra-Bold.otf);
+}
+
+@font-face {
+    font-family: NeutraText-Book;
+    src: url(../medias/fonts/NeutraText-Book.otf);
+}
+
+@font-face {
     font-family: Geometos;
     src: url(../medias/fonts/Geometos.ttf);
 }
@@ -76,8 +92,11 @@ img{
 
 img.bannieres{
     float:none;
-    width: 426px;
-    height: 240px;
+    width: 394px;
+    height: 230px;
+    -moz-border-radius:20px;
+    -webkit-border-radius:20px;
+    border :10px ridge #959484;
 }
 .imgbanniere{
     width: 812px;
@@ -106,7 +125,6 @@ a:visited {
 a:hover {
     cursor: url("../medias/clapselec.cur"), pointer;
 }
-/* ......................................Top Nav........................................................... */
 
 header {
     padding-bottom: 80px;
@@ -207,7 +225,6 @@ ul li ul li {
     width: 100%;
 }
 
-/* ......................................Content........................................................... */
 
 .line {
     border-top: 1px dashed #666666;
@@ -240,7 +257,6 @@ h2 {
 }
 * {box-sizing:border-box}
 
-/* Slideshow container */
 .conteneur-slideshow {
     max-width: 1000px;
     position: relative;
@@ -248,12 +264,10 @@ h2 {
     z-index:-1;
 }
 
-/* Hide the images by default */
 .mesSlides {
     display: none;
 }
 
-/* Next & previous buttons */
 .prec, .sui {
     cursor: pointer;
     position: absolute;
@@ -285,13 +299,31 @@ right:200px;
     background-color: rgba(0,0,0,0.8);
 }
 
+.artitres{
+    font-family: CocogooseExtraBold;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #6EB0A2;
+}
+
+.metarticle{
+    color: #DD5E35;
+    text-align: center;
+    text-transform: uppercase;
+    font: bold 10px NeutraText-Book;
+    margin-top: 15px;
+}
+
+.textedesc{
+    font-family: NeutraText-Book;
+    font-size: 15px;
+}
 
 .texte {
-    color: #000000;
-    background: #FFFFFF;
-    text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
-    color: #000000;
-    background: #FFFFFF;
+    font-family: NeutraText-Book;
+    text-shadow:#feffa3;
+    background: black;
 }
 
 
@@ -320,7 +352,7 @@ right:200px;
 }
 
 
-/*.fade {
+.fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
     animation-name: fade;
@@ -335,4 +367,8 @@ right:200px;
 @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
+}
+footer>p{
+    text-align: center;
+    opacity: 60%;
 }

@@ -4,20 +4,24 @@
     <!-- /*http://wordpress.la-fin-du-film.com/ Faire leur barre de recherche*/ -->
 
 
-    <body onload="showSlides(0)">
+    <body onload="slideActuelle(1)">
 
     </br>
 
     <!--      http://wordpress.la-fin-du-film.com/buried-2010/585/ -->
     <div class="contenu">
 
+
+        <div class="zigzag"></div>
+        <p class="tag">Les <em><b>spoilers</b></em> à l'affiche</p>
+        <div class="zigzag"></div>
+
+
         <div class="conteneur-slideshow">
 
-            <div class="mesSlides fade">
-                <div class="nombretext">1 / 4</div>';
+            <a href="../controllers/controlleur_article.php?idnews='.$idnews.'"><div class="mesSlides fade">
                 visuel($titre, $visuelchar, "bannieres", false);
-                echo '<div class="texte">'.$titre.'</div>';
-                echo'</div>';
+                </div>
             <?php
                 slide();
             ?>
@@ -33,7 +37,6 @@
             <span class="dot" onclick="slideActuelle(1)"></span>
             <span class="dot" onclick="slideActuelle(2)"></span>
             <span class="dot" onclick="slideActuelle(3)"></span>
-            <span class="dot" onclick="slideActuelle(4)"></span>
         </div>
 
         <div class="zigzag"></div>

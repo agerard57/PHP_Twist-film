@@ -3,8 +3,35 @@
     $title="Le twist du film";
 
     include_once (dirname(__FILE__).'/../config/dbconnect.php');
+    include_once (dirname(__FILE__).'/modele_header.php');
 
-    function article(){
+
+
+    //GETTERS-----------------------------------------------------------------------------------------------------------
+
+    function getNewsMenu($limite) // Get les news du menu principal ("banniere + contenu")
+    {
+        global $objPdo;
+
+        $sql=
+            "SELECT n.idnews, n.titrenews, n.textenews, n.datenews, CONCAT( r.nom,' ', r.prenom) AS redacteur
+             FROM news n, redacteur r 
+             WHERE n.idredacteur = r.idredacteur 
+             ORDER BY n.datenews DESC
+             LIMIT $limite";
+
+        $requete = $objPdo->prepare($sql);
+        $requete->execute();
+
+        return $requete;
+    }
+
+
+
+    //Autres focntions--------------------------------------------------------------------------------------------------
+
+    function article()
+    {
 
         $news = getNewsMenu(6);
 
@@ -13,14 +40,15 @@
             $titre = $row['titrenews'];
             $visuelchar = " (";
             $previsutexte = $row['textenews'];
+            $idnews = $row['idnews'];
 
             echo'<div class="article-liste">';
-            echo'<h3> <b>'.$row['titrenews'].'</b> </h3>';
-            echo visuel($titre, $visuelchar, "bannieres", true);
+            echo'<h3 class="artitres"> <b>'.$row['titrenews'].'</b> </h3>';
+            echo visuel($titre, $visuelchar, "bannieres", true, $idnews);
 
-            echo'<p> Fait le '.$row['datenews'].' par '.$row['redacteur'].'</p>';
+            tronquer_texte($previsutexte, $idnews);
 
-            tronquer_texte($previsutexte);
+            echo'<p class="metarticle"> '.$row['datenews'].' - '.$row['redacteur'].'</p>';
 
             echo'<div style="clear:both;"></div>';
             echo'</div>';
@@ -28,43 +56,46 @@
         }
     }
 
-    function slide(){
-
-        $news = getNewsMenu(3);
-        $id = 0;
-
-        foreach($news as $row)
-        {
-            $titre = $row['titrenews'];
-            $visuelchar = " (";
-    //
-                $id++;
-
-            echo'<div class="mesSlides fade">';
-                echo '<div class="nombretext">'.$id.' / 4</div>';
-                visuel($titre, $visuelchar, "bannieres", false);
-                echo '<div class="texte">'.$titre.'</div>';
-            echo'</div>';
 
 
-        }
-
-    }
-    function tronquer_texte($previsutexte) // Get une news avec l'id différent du news actuel
+    function tronquer_texte($previsutexte, $idnews) // Get une news avec l'id différent du news actuel
     {
         $texte_espaces = preg_replace('/\s+/', ' ', $previsutexte);// tronque le texte
         $texte_tronque = mb_substr($texte_espaces, 0, mb_strpos($texte_espaces, ' ', 200));//empèche de tronquer si il n'y a pas d'espace
         $previsutexte = trim(mb_substr($texte_tronque, 0, mb_strrpos($texte_tronque, ' '))).'...';
 
-        echo'<p>'.$previsutexte.' <a href="../controllers/controlleur_article.php?idnews=">Lire la suite...</a></p>';
+        echo'<p class="textedesc">'.$previsutexte.' <a href="../controllers/controlleur_article.php?idnews='.$idnews.'">Lire la suite...</a></p>';
     }
 
 
 
+    function slide()
+    {
+        $news = getNewsMenu(4);
+        $id = 0;
+        global $idnews;
+
+        foreach($news as $row)
+        {
+            $titre = $row['titrenews'];
+            $visuelchar = " (";
+
+                $id++;
+
+            echo'<a href="../controllers/controlleur_article.php?idnews='.$idnews.'"><div class="mesSlides fade">';
+                echo '<div class="nombretext">'.$id.' / 4</div>';
+                echo visuel($titre, $visuelchar, "bannieres", false, null);
+                echo '<div class="texte">'.$titre.'</div>';
+            echo'</div></a>';
+
+
+        }
+
+    }
 
 
 
-function visuel($str, $char, $type, $article)
+    function visuel($str, $char, $type, $article, $idnews)
     {
         $visu = substr($str, 0, strrpos($str, $char));
         $visu = trim($visu);                                             // simple trim
@@ -75,113 +106,53 @@ function visuel($str, $char, $type, $article)
 
         if($article == true)
         {
-            echo'<img class='.$type.' src="assets/medias/'.$type.'/'.$visu.'.jpg">  <img/>';
+            echo'<a href="../controllers/controlleur_article.php?idnews='.$idnews.'"><img class='.$type.' src="assets/medias/'.$type.'/'.$visu.'.jpg">  <img/></a>';
         }
-            else
+        else
         {
             echo'<img class="imgbanniere" src="assets/medias/'.$type.'/'.$visu.'.jpg"> <img/>';
         }
 
     }
 
-    function foreach_liste($table, $trie)
-    {
-        foreach($table as $row)
-        {
-            echo '<li> <a href="assets/controllers/controlleur_listearticles.php?'.$trie.'='.strtolower($row[$trie]).'">'.$row[$trie].'</a> </li>';
-        }
-    }
 
-
-
-//GETTERS
-
-function getNewsMenu($limite) // Get une news avec l'id différent du news actuel
-{
-    global $objPdo;
-
-    $sql=
-        "SELECT n.idnews, n.titrenews, n.textenews, n.datenews, CONCAT( r.nom,' ', r.prenom) AS redacteur
-         FROM news n, redacteur r 
-         WHERE n.idredacteur = r.idredacteur 
-         ORDER BY n.datenews DESC
-         LIMIT $limite";
-
-    $requete = $objPdo->prepare($sql);
-    $requete->execute();
-
-    return $requete;
-}
-
-
-function getTheme() // Get une news avec l'id différent du news actuel
-{
-    global $objPdo;
-
-    $sql=
-        "SELECT *
-         FROM theme t
-         ORDER BY t.description ASC";
-
-    $requete = $objPdo->prepare($sql);
-    $requete->execute();
-
-    return $requete;
-}
-
-
-function getAnnee() // Rapporte les news
-{
-        global $objPdo;
-
-    $sql=
-        "SELECT DISTINCT YEAR(datenews) as annee
-         FROM news
-         ORDER BY datenews DESC";
-
-    $requete = $objPdo->prepare($sql);
-    $requete->execute();
-
-    return $requete->execute();
-}
-
-/*
-        function getAutreNews( $differ_idnews  ) // Get une news avec l'id différent du news actuel
-        {
-            $requete = conn->prepare("
-SELECT idnews
-FROM news
-WHERE idnews != ?
-AND idtheme= ?
-ORDER BY RAND()
-LIMIT 4 ");
-
-            return $requete->execute(array($differ_idnews)) ? $requete->fetchAll() : false;
-        }
-    }*/
 
 ?>
+
+
+
+<!--Scripts------------------------------------------------------------------------------------------------------------->
+
 <script>
-    var slideIndex = 1;
+
+    var slideIndex = 0;
     showSlides(slideIndex);
 
-    function plusSlides(n) {
+    function plusSlides(n)
+    {
         showSlides(slideIndex += n);
     }
 
-    function slideActuelle(n) {
+    function slideActuelle()
+    {
         showSlides(slideIndex = n);
     }
 
-    function showSlides() {
+    function showSlides(n) {
         var i;
         var slides = document.getElementsByClassName("mesSlides");
-        for (i = 1; i < slides.length; i++) {
+        var dots = document.getElementsByClassName("points");
+        for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
         slideIndex++;
         if (slideIndex > slides.length) {slideIndex = 1}
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
         slides[slideIndex-1].style.display = "block";
-        setTimeout(showSlides, 10000); // Change image every 2 seconds
+        dots[slideIndex-1].className += " active";
+        setTimeout(slideActuelle, 2000); // Change image every 2 seconds
     }
+
 </script>

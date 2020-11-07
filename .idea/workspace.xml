@@ -23,22 +23,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5920b05d-cff6-4ec4-9c9c-82cc45d12da3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/53b16180-b76b-4a71-81c2-a298831a72ea/storage_v2/_src_/schema/gerard326u_php_projet.VW5fnA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/53b16180-b76b-4a71-81c2-a298831a72ea/storage_v2/_src_/schema/info_news.xJtmSQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/53b16180-b76b-4a71-81c2-a298831a72ea/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/53b16180-b76b-4a71-81c2-a298831a72ea/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/53b16180-b76b-4a71-81c2-a298831a72ea/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/53b16180-b76b-4a71-81c2-a298831a72ea/storage_v2/_src_/schema/phpmyadmin.q9h56A.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/53b16180-b76b-4a71-81c2-a298831a72ea/storage_v2/_src_/schema/test.kkQ2AA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/controllers/controlleur_accueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/controllers/controlleur_accueil.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/design/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/design/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/includes/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/medias/affiches/le_bon_la_brute_et_le_truant.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/medias/bannieres/lblblt.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/medias/bannieres/ljolts.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/includes/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/vues/vue_footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/vues/vue_header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/medias/affiches/district9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/medias/bannieres/district9.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/modeles/modele_accueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/modeles/modele_accueil.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/vues/vue_accueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/vues/vue_accueil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,11 +63,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\PHP_projet\assets\vues" />
       <recent name="C:\xampp\htdocs\PHP_projet\assets\errors" />
       <recent name="C:\xampp\htdocs\PHP_projet" />
       <recent name="C:\xampp\htdocs\PHP_projet\assets\config" />
       <recent name="C:\xampp\htdocs\PHP_projet\assets\modeles" />
-      <recent name="C:\xampp\htdocs\PHP_projet\assets" />
     </key>
   </component>
   <component name="RunManager" selected="PHPUnit.PHP_projet">
@@ -104,7 +99,8 @@
       <updated>1604509856276</updated>
       <workItem from="1604509858993" duration="26234000" />
       <workItem from="1604565784152" duration="42050000" />
-      <workItem from="1604649272954" duration="40479000" />
+      <workItem from="1604649272954" duration="40820000" />
+      <workItem from="1604740045646" duration="12298000" />
     </task>
     <servers />
   </component>
@@ -200,18 +196,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.2.right/-1824.36.1824.996/0.0.1920.1040@0.0.1920.1040" timestamp="1604510052088" />
-    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1604602952300">
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1604742778794">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="443" key="NewPhpFileDialog/-1824.36.1824.996/0.0.1920.1040@0.0.1920.1040" timestamp="1604602952300" />
+    <state x="794" y="443" key="NewPhpFileDialog/-1824.36.1824.996/0.0.1920.1040@0.0.1920.1040" timestamp="1604742778794" />
     <state x="-998" y="150" key="SettingsEditor" timestamp="1604706953430">
       <screen x="-1824" y="36" width="1824" height="996" />
     </state>
     <state x="-998" y="150" key="SettingsEditor/-1824.36.1824.996/0.0.1920.1040@0.0.1920.1040" timestamp="1604706953430" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1604668489309">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1604741030809">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/-1824.36.1824.996/0.0.1920.1040@0.0.1920.1040" timestamp="1604668489309" />
+    <state width="498" height="446" key="SwitcherDM/-1824.36.1824.996/0.0.1920.1040@0.0.1920.1040" timestamp="1604741030809" />
     <state x="859" y="397" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1604569834724">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
