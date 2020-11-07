@@ -2,23 +2,93 @@
 /*      En cas de bug de refresh du css      */
 /*                Ctrl + F5                  */
 /*-------------------------------------------*/
+@font-face {
+    font-family: TildaPetite;
+    src: url(../medias/fonts/TildaPetite.otf);
+}
+@font-face {
+    font-family: Geometos;
+    src: url(../medias/fonts/Geometos.ttf);
+}
 html{
+    touch-action: none;
     cursor: url("../medias/clap.cur"), pointer;
 }
+
 html:active {
     cursor: url('../medias/clapped.cur'), auto;
+}
+
+#titre{
+    font-family: Geometos
+}
+
+#bg-color-header{
+    background-color: #28314e;
+    height: 110px;
+    float: left;
+    width: -webkit-fill-available;
+    z-index: -1
+}
+hr {
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    border-style: inset;
+    border-width: 1px;
+}
+
+.article-liste{
+    display: block;
+    float: left;
+    width: 400px;
+}
+.contenu{
+    text-align: center;
+    width: 812px;
+    margin: 0 auto 50px;
+
+}
+
+.contenu:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+header>div>img{
+    width: 130px;
+    height: auto;
+    float: left;
+}
+
+header>div>h1{
+    margin-top:45px;
 }
 
 img{
     width: 100px;
     height: auto;
-    float: left;
 }
 
+img.bannieres{
+    float:none;
+    width: 426px;
+    height: 240px;
+}
+.imgbanniere{
+    width: 812px;
+    height: 456px;
+}
 body {
-    background-color: #2f2f2f;
+    /*background-color: #2f2f2f;*/
+    background: #221E1D url("../medias/wrap.jpg") repeat-y top center;
     font-family: Arial;
-    color: #ffffff;
+    margin: 0 auto 50px;
+    color: black;
     line-height: 1.5em;
     font-size: 14px;
     display: block;
@@ -36,15 +106,14 @@ a:visited {
 a:hover {
     cursor: url("../medias/clapselec.cur"), pointer;
 }
-
-
-.contenu{
-    text-align: center;
-}
 /* ......................................Top Nav........................................................... */
 
 header {
-    background-color: #28314e;
+    padding-bottom: 80px;
+    display: block;
+    position: -webkit-sticky;
+    position: sticky;
+    top:0;
 }
 
 body {
@@ -57,36 +126,53 @@ a {
 
 nav {
     font-family: monospace;
+    float : right
+
 }
 
 ul {
     background: darkorange;
-    list-style: none;
-    margin: 0;
-    padding-left: 0;
+    list-style: none
 }
 
 li {
     color: #fff;
-    background: darkorange;
     display: block;
     float: left;
     padding: 1rem;
     position: relative;
     text-decoration: none;
-    transition-duration: 0.5s;
+    transition-duration: 0.5s
 
 }
 
 li a {
-    color: #fff;
+    color: #fff
 }
 
 li:hover,
 li:focus-within {
     background: red;
-    cursor: url("../medias/clap.cur"), pointer;
+    cursor: url("../medias/clap.cur"), pointer
 
+}
+.tag{
+    font-family: BrandonGrotesque-Bold;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 10px;
+    margin: 10px 0 0 0;
+    padding: 25px 0 8px
+}
+
+.zigzag{
+    content:url("data:../medias/zigzag.png")
+}
+
+em{
+font-family: PosterBodoniBT-Roman;
+color: #E9633B
 }
 
 li:focus-within a {
@@ -143,10 +229,6 @@ h2 {
     letter-spacing: 3px;
 }
 
-#content {
-    width: 778px;
-    text-align: left;
-}
 
 .clear {
     clear: both;
@@ -154,4 +236,103 @@ h2 {
 
 .footer {
     height: 50px;
+    display: none;
+}
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.conteneur-slideshow {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    z-index:-1;
+}
+
+/* Hide the images by default */
+.mesSlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prec, .sui {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.prec{
+left:200px;
+}
+.sui{
+right:200px;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+.prec:hover, .sui:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+.texte {
+    color: #000000;
+    background: #FFFFFF;
+    text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
+    color: #000000;
+    background: #FFFFFF;
+}
+
+
+.nombretext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+
+.points {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .points:hover {
+    background-color: #717171;
+}
+
+
+/*.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
 }
