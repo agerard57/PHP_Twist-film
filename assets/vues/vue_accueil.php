@@ -66,7 +66,7 @@
                     slide();
                 ?>
                 </div>
-    
+
             <div class="zigzag"></div>
             <p class="tag">Nos <em><b>spoilers</b></em> les plus récents</p>
             <div class="zigzag"></div>

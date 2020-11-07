@@ -62,7 +62,7 @@
         $texte_tronque = mb_substr($texte_espaces, 0, mb_strpos($texte_espaces, ' ', 200));//empèche de tronquer si il n'y a pas d'espace
         $previsutexte = trim(mb_substr($texte_tronque, 0, mb_strrpos($texte_tronque, ' '))).'...';
 
-        echo'<p class="textedesc">'.$previsutexte.' <a href="../../assets/controllers/controlleur_article.php?idnews='.$idnews.'">Lire la suite...</a></p>';
+        echo'<p class="textedesc">'.$previsutexte.' <a href="../controllers/controlleur_article.php?idnews='.$idnews.'">Lire la suite...</a></p>';
     }
 
 
@@ -110,14 +110,14 @@ function visuel($str, $char, $type, $article, $idnews)
         if($article == true)
         {
             str_replace("\\","/",dirname(__FILE__));
-            echo'<a href="../../assets/controllers/controlleur_article.php?idnews='.$idnews.'"><img class='.$type.' src="assets/medias/'.$type.'/'.$visu.'.jpg">  <img/></a>';
+            echo'<a href="../controllers/controlleur_article.php?idnews='.$idnews.'"><img class='.$type.' src="assets/medias/'.$type.'/'.$visu.'.jpg">  <img/></a>';
         }
     else if($article == false && $idnews != null)
         {
-            echo'<img class="imgbanniere" src="../../assets/medias/'.$type.'/'.$visu.'.jpg"> <img/>';
+            echo'<img class="imgbanniere" src="../medias/'.$type.'/'.$visu.'.jpg"> <img/>';
         }
     else{
-        echo'<img class="mesSlides fading" src="assets/medias/bannieres/'.$visu.'.jpg"> <img/>';
+        echo'<img class="mesSlides fading" src="../assets/medias/bannieres/'.$visu.'.jpg"> <img/>';
 
     }
 

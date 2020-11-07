@@ -1,0 +1,43 @@
+body {
+    background-color: #221E1D;
+    
+}
+section {
+    text-align: center;
+    padding: 60px 40px;
+    margin: 0px;
+    position: absolute; 
+    top: 50%; left: 50%; 
+    transform: translate(-50%, -50%); 
+    border: black 3px solid;
+    background-color: #28314E;
+
+
+
+
+}
+h1, p, input, td {
+    color: #28314E;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+p, td {
+    font-size: 20px;
+
+}
+form{
+    padding: 60px 110px;
+    background: #221E1D url("./assets/medias/wrap.jpg") left;
+   
+}
+
+input {
+    font-size: 25px;
+
+}
+a:link, a:visited {
+    color: 28314E;
+}
