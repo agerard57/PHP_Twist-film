@@ -1,6 +1,6 @@
 <html lang="fr">
 <head>
-    <link rel="stylesheet"  href="styleConnexion.css" />
+    <link rel="stylesheet" href="../design/log.css" />
     <meta charset="UTF-8">
 </head>
 

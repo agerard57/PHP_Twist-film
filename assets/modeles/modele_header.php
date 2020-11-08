@@ -49,14 +49,14 @@ function foreach_liste($table, $trie, $lien)
     if($lien == 1){
         foreach($table as $row)
         {
-            echo '<li> <a href="assets/controllers/controlleur_listearticles.php/?'.$trie.'='.strtolower($row[$trie]).'">'.$row[$trie].'</a> </li>';
+            echo '<li> <a href="assets/controllers/controlleur_listearticles.php?'.$trie.'='.strtolower($row[$trie]).'">'.$row[$trie].'</a> </li>';
         }
     }
 
     if($lien == 2){
         foreach($table as $row)
         {
-            echo '<li> <a href="../../controllers/controlleur_listearticles.php/?'.$trie.'='.strtolower($row[$trie]).'">'.$row[$trie].'</a> </li>';
+            echo '<li> <a href="../controllers/controlleur_listearticles.php?'.$trie.'='.strtolower($row[$trie]).'">'.$row[$trie].'</a> </li>';
         }
     }
 }

@@ -40,8 +40,8 @@
                             ?>
                         </ul>
                     </li>
-                    <li><a href="../controllers/sinscrire.php">S'inscrire</a></li>
-                    <li><a href="../controllers/seconnecter.php">Se connecter</a></li>
+                    <li><a href="../vues/vue_signup.php">S'inscrire</a></li>
+                    <li><a href="../vues/vue_login.php">Se connecter</a></li>
                     <li><a href="../vues/vue_about.php">A propos ...</a></li>
                 </ul>
             </nav>

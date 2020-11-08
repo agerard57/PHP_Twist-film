@@ -4,23 +4,25 @@
 
     <head>
 
+
+
+        <title><?php echo $title; ?></title>
+        <meta charset=utf-8" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+        <link href="../design/style.css" media="all" rel="stylesheet" type="text/css"/>
         <?php
         global $title;
         include_once (dirname(__FILE__).'/../config/dbconnect.php');
         include_once (dirname(__FILE__).'/../modeles/modele_header.php');
         ?>
-
-        <title><?php echo $title; ?></title>
-        <meta charset=utf-8" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
-        <link href="../design/style.css" media="all" rel="stylesheet" type="text/css"/>
-
     </head>
 
     <header>
 
         <div id="bg-color-header">
 
-            <img src="assets/medias/logo.png" src="assets/medias/logo.png">
+            <a href="../../index.php" class="logo">
+                <img src="../medias/logo.png">
+            </a>
 
             <h1 id="titre">Le twist du film</h1>
 
@@ -46,8 +48,8 @@
                             ?>
                         </ul>
                     </li>
-                    <li><a href="../controllers/sinscrire.php">S'inscrire</a></li>
-                    <li><a href="../controllers/seconnecter.php">Se connecter</a></li>
+                    <li><a href="../controllers/controlleur_signup.php">S'inscrire</a></li>
+                    <li><a href="../controllers/controller_login.php">Se connecter</a></li>
                     <li><a href="../vues/vue_about.php">A propos ...</a></li>
                 </ul>
             </nav>

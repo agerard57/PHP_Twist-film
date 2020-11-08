@@ -73,10 +73,12 @@
 
         foreach($news as $row)
         {
+            $idnews = $row['idnews'];
             $visu=$row["titrenews"];
             $visuelchar = " (";
-            echo visuel($visu, $visuelchar, "bannieres", false, null);
 
+            echo'<a href="assets/controllers/controlleur_article.php?idnews='.$idnews.'">';
+            echo visuel($visu, $visuelchar, "bannieres", false, null).'</a>';
         }
     }
 
@@ -117,7 +119,7 @@ function visuel($str, $char, $type, $article, $idnews)
             echo'<img class="imgbanniere" src="../medias/'.$type.'/'.$visu.'.jpg"> <img/>';
         }
     else{
-        echo'<img class="mesSlides fading" src="../assets/medias/bannieres/'.$visu.'.jpg"> <img/>';
+        echo'<img class="mesSlides fading" src=" assets/medias/bannieres/'.$visu.'.jpg"> <img/>';
 
     }
 

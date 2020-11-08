@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styleConnexion.css" />
+    <link rel="stylesheet" href="../design/log.css" />
 
 </head>
 

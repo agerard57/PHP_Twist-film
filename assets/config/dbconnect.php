@@ -6,15 +6,9 @@ $db_config['DB_NAME'] = 'gerard326u_projet_php';
 $db_config['CHARSET'] = $options = array(
                         PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
 
-//BDD LocalHost
-$db_config['HOST'] = 'localhost';
-$db_config['USER'] = 'root';
-$db_config['PASSWORD'] = '';
-
-//BDD DevWeb
-//$db_config['HOST'] = 'devbdd.iutmetz.univ-lorraine.fr';
-//$db_config['USER'] = 'gerard326u_appli';
-//$db_config['PASSWORD'] = '3630';
+$db_config['HOST'] = 'devbdd.iutmetz.univ-lorraine.fr';
+$db_config['USER'] = 'gerard326u_appli';
+$db_config['PASSWORD'] = '3630';
 
 
 
