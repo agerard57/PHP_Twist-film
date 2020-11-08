@@ -1,0 +1,323 @@
+#bg-color-header
+{
+    background-color : #28314e;
+    float : left;
+    height : 110px;
+    width : -webkit-fill-available;
+    z-index : -1;
+}
+#titre
+{
+    font-family : Geometos;
+}
+.article-liste
+{
+    display : block;
+    float : left;
+    width : 400px;
+}
+.article-liste>h3>b{
+    font-family: CocogooseExtraBold;
+    font-size: 18px;
+    color: #364369;
+;
+}
+.clear
+{
+    clear : both;
+}
+.contenu
+{
+    margin : 0 auto 50px;
+    text-align : center;
+    width : 812px;
+}
+.contenu:after
+{
+    clear : both;
+    content : "";
+    display : table;
+}
+.contenuslide
+{
+    z-index : -1;
+}
+.fading
+{
+    animation : fading 10s infinite;
+}
+.imgbanniere
+{
+    height : 456px;
+    width : 812px;
+}
+.line
+{
+    border-top : 1px dashed #666666;
+}
+.logo
+{
+    float : left;
+    padding : 15px;
+}
+.metarticle{
+    font-family: "Arial";
+    font-size: 12px;
+    height: 37px;
+}
+.mesSlides
+{
+    align-content : center;
+    bottom : 27px;
+    display : contents;
+    height : 360px;
+    left : 100px;
+    position : relative;
+    width : 600px;
+    z-index : -1;
+}
+.tag
+{
+    font-family : BrandonGrotesque-Bold;
+    font-size : 30px;
+    letter-spacing : 10px;
+    margin : 0 0 21px 0;
+    padding : 7px 0 8px;
+    text-align : center;
+    text-transform : uppercase;
+}
+.textedesc{
+    font-family: NeutraText-Book;
+    font-size: 16px;
+    width: 305px;
+    padding: 0px 0 0 46px;
+
+}
+.vide
+{
+    border : 10px;
+}
+.zigzag
+{
+    background : url("../medias/zigzag.png") repeat-x;
+    background-size : 184px;
+    display : block;
+    height : 55px;
+}
+@font-face
+{
+    font-family : TildaPetite;
+    src : url(../medias/fonts/TildaPetite.otf);
+}
+@font-face
+{
+    font-family : CocogooseExtraBold;
+    font-style : normal;
+    font-weight : 100;
+    src : url(../medias/fonts/Cocogoose-Extra-Bold.otf);
+}
+@font-face
+{
+    font-family : Bodoni-Black;
+    src : url(../medias/fonts/Bodoni-Black.ttf);
+}
+@font-face
+{
+    font-family : NeutraText-Book;
+    src : url(../medias/fonts/NeutraText-Book.otf);
+}
+@font-face
+{
+    font-family : Geometos;
+    src : url(../medias/fonts/Geometos.ttf);
+}
+@keyframes fading
+{
+    0%
+    {
+        opacity : 0;
+    }
+    100%
+    {
+        opacity : 0;
+    }
+    50%
+    {
+        opacity : 1;
+    }
+}
+a
+{
+    text-decoration : none;
+}
+a:hover
+{
+    cursor : url("../medias/clapselec.cur"), pointer;
+}
+a:link,
+a:visited
+{
+    color : #A8D3E7;
+}
+body
+{
+    font-family : Arial, Helvetica, sans-serif;
+}
+body
+{
+    background : #221E1D url("../medias/wrap.jpg") repeat-y top center;
+    color : black;
+    display : block;
+    font-family : Arial;
+    font-size : 14px;
+    line-height : 1.5em;
+    margin : 0 0 0 0;
+    margin : 0 auto 50px;
+    margin-block-end : 0;
+    margin-block-start : 0;
+}
+em
+{
+    color : #E96B45;
+    font-family : PosterBodoniBT-Roman;
+}
+footer
+{
+    bottom : 0;
+    display : block;
+    height : 20px;
+    opacity : 60%;
+    text-align : center;
+    width : auto;
+}
+h1
+{
+    color : #CCCCCC;
+    float : left;
+    font-size : 30px;
+    height : 53px;
+    letter-spacing : 5px;
+    margin : 0 0 0 0;
+}
+h2
+{
+    color : #e3007a;
+    font-size : 20px;
+    letter-spacing : 3px;
+    padding-top : 25px;
+}
+header
+{
+    display : block;
+    position : sticky;
+    position : -webkit-sticky;
+    top : 0;
+}
+header>div>h1
+{
+    margin-top : 45px;
+}
+header>div>img
+{
+    float : left;
+    height : auto;
+    width : 100px;
+}
+hr
+{
+    border-style : inset;
+    border-width : 1px;
+    display : block;
+    margin-block-end : 0;
+    margin-block-start : 0;
+    margin-inline-end : 0;
+    margin-inline-start : 0;
+    unicode-bidi : isolate;
+}
+html
+{
+    cursor : url("../medias/clap.cur"), pointer;
+    touch-action : none;
+}
+html:active
+{
+    cursor : url('../medias/clapped.cur'), auto;
+}
+img
+{
+    height : auto;
+    width : 100px;
+}
+img.bannieres
+{
+    border : 10px ridge #959484;
+    float : none;
+    height : 197px;
+    moz-border-radius : 20px;
+    webkit-border-radius : 20px;
+    width : 343px;
+}
+li
+{
+    color : #A8D3E7;
+    display : block;
+    float : left;
+    padding : 1rem;
+    position : relative;
+    text-decoration : none;
+    transition-duration : 0.5s;
+}
+li a
+{
+    color : #A8D3E7;
+}
+li:focus-within a
+{
+    outline : none;
+}
+li:hover,
+li:focus-within
+{
+    background : #313c62;
+    cursor : url("../medias/clap.cur"), pointer;
+}
+nav
+{
+    float : right;
+    font-family : monospace;
+    padding : 15px;
+}
+ul
+{
+    background : #28314E;
+    list-style : none;
+    padding-inline-start : 00px;
+}
+ul li ul
+{
+    background : #28314E;
+    cursor : url("../medias/clap.cur"), pointer;
+    display : none;
+    left : 0;
+    margin-top : 1rem;
+    min-width : 5rem;
+    opacity : 0;
+    position : absolute;
+    transition : all 0.5s ease;
+    visibility : hidden;
+}
+ul li ul li
+{
+    clear: both;
+    width: 186px;
+    text-align: center;
+}
+ul li:hover > ul,
+ul li:focus-within > ul,
+ul li ul:hover,
+ul li ul:focus
+{
+    display : block;
+    opacity : 1;
+    visibility : visible;
+}
