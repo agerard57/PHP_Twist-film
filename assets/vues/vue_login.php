@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../design/log.css" />
+    <link rel="icon" href="../medias/favicon.ico" />
+
 
 </head>
 

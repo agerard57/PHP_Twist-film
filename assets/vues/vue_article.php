@@ -12,6 +12,8 @@
     <title><?php echo $title; ?></title>
     <meta charset=utf-8" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <link href="../design/style.css" media="all" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="../medias/favicon.ico" />
+
 
 </head>
 

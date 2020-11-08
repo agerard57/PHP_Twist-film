@@ -13,6 +13,7 @@
         <title><?php echo $title; ?></title>
         <meta charset=utf-8" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
         <link href="../design/style.css" media="all" rel="stylesheet" type="text/css"/>
+        <link rel="icon" href="../medias/favicon.ico" />
 
     </head>
 
@@ -66,23 +67,38 @@
         <br>
 
         <div class="zigzag"></div>
-        <p class="tag">Tous nos <em><b>articles</b></em></p>
-        <div class="zigzag"></div>
-
-        </br>
-
         <?php
-        if (!isset($_GET["description"])&&!isset($_GET["annee"]))
-        articles(null, 0);
-        else{
-            if(isset($_GET["description"])){
+
+            if (!isset($_GET["description"])&&!isset($_GET["annee"]))
+            {
+                echo'<p class="tag"><b>Tous nos <em>articles</b></em></p>';
+                echo'<div class="zigzag"></div>';
+                echo'</br>';
+                articles(null, 0);
+            }
+            else if(isset($_GET["description"]))
+            {
+                echo'<p class="tag"><b>Catégorie <em>'.$_GET["description"].'</b></em></p>';
+                echo'<div class="zigzag"></div>';
+                echo'</br>';
                 articles($_GET["description"], 1);
             }
-            else if(isset($_GET["annee"])){
+            else if(isset($_GET["annee"]))
+            {
+                echo'<p class="tag"><b>Année <em>'.$_GET["annee"].'</b></em></p>';
+                echo'<div class="zigzag"></div>';
+                echo'</br>';
                 articles($_GET["annee"], 2);
             }
-        }
-
+            else
+            {
+                echo'<p class="tag"><b>Année <em>'.$_GET["annee"].'</b></em></p>';
+                echo'<div class="zigzag"></div>';
+                echo'</br>';
+                articles($_GET["annee"], 2);
+            }
+            
+    
         ?>
 
     </div>

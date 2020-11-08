@@ -43,7 +43,7 @@ if ($titre == false || strlen($status) != 3) {
         echo'<h2>'.$nom.'</h2>';
         echo'<p>'.$message.'</p>';
 ?>
-        <p><a href="/PHP_projet/">Retour au menu</a></p>
+        <p><a href="/~gerard326u/PHP_projet/">Retour au menu</a></p>
     </div>
     <div class="stack-container">
         <div class="card-container">

@@ -7,6 +7,7 @@
         ?>
 
         <link href="../design/style.css" media="all" rel="stylesheet" type="text/css"/>
+        <link rel="icon" href="../medias/favicon.ico" />
 
     </head>
 

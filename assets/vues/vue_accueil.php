@@ -1,6 +1,7 @@
 <html lang="fr" xmlns="http://www.w3.org/1999/html">
     <head>
-        <link href="/PHP_projet/assets/design/style.css" media="all" rel="stylesheet" type="text/css"/>
+        <link href="/~gerard326u/PHP_projet/assets/design/style.css" media="all" rel="stylesheet" type="text/css"/>
+        <link rel="icon" href="assets/medias/favicon.ico" />
         <?php
         include_once (dirname(__FILE__).'/../config/dbconnect.php');
         include_once (dirname(__FILE__).'/../modeles/modele_header.php');
@@ -20,7 +21,7 @@
             <nav role="navigation">
                 <ul>
                     <li><a href="index.php" >Menu</a></li>
-                    <li><a href="/PHP_projet/assets/controllers/controlleur_listearticles.php" >Tous les articles</a></li>
+                    <li><a href="/~gerard326u/PHP_projet/assets/controllers/controlleur_listearticles.php" >Tous les articles</a></li>
                     <li><a aria-haspopup="true">Par thème</a>
                         <ul aria-label="sousmenu">
                             <?php

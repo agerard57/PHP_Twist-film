@@ -1,6 +1,7 @@
 <html lang="fr">
 <head>
     <link rel="stylesheet" href="../design/log.css" />
+    <link rel="icon" href="../medias/favicon.ico" />
     <meta charset="UTF-8">
 </head>
 
