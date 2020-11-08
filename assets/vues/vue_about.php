@@ -14,7 +14,9 @@
 
         <div id="bg-color-header">
 
-            <img src="../medias/logo.png" src="../medias/logo.png">
+            <a href="../../index.php" class="logo">
+                <img src="../medias/logo.png">
+            </a>
 
             <h1 id="titre">Le twist du film</h1>
 

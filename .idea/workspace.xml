@@ -23,24 +23,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5920b05d-cff6-4ec4-9c9c-82cc45d12da3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/modeles/modele_login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/config/dbconnect.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/config/dbconnect.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/controllers/controlleur_accueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/controllers/controlleur_accueil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/design/log.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/design/log.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/design/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/design/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/medias/affiches/la_haut.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/medias/affiches/laisse_moi_entrer.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/medias/bannieres/bouquet_final.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/medias/bannieres/bouquet_final.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/medias/bannieres/laisse_moi_entrer.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/medias/bannieres/up.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/medias/affiches/lhomme_qui_voulait_vivre_sa_vie.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/medias/bannieres/lhomme_qui_voulait_vivre_sa_vie.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/modeles/modele_accueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/modeles/modele_accueil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/modeles/modele_header.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/modeles/modele_header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/vues/vue_about.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/vues/vue_about.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/vues/vue_accueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/vues/vue_accueil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/vues/vue_header.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vues/vue_article.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/vues/vue_article.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/vues/vue_listearticles.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/vues/vue_listearticles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/vues/vue_login.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/vues/vue_login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/vues/vue_signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/vues/vue_signup.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +111,7 @@
       <workItem from="1604565784152" duration="42050000" />
       <workItem from="1604649272954" duration="40820000" />
       <workItem from="1604740045646" duration="50684000" />
-      <workItem from="1604798592955" duration="5020000" />
+      <workItem from="1604798592955" duration="10465000" />
     </task>
     <servers />
   </component>
@@ -215,10 +207,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.2.right/-1824.36.1824.996/0.0.1920.1040@0.0.1920.1040" timestamp="1604510052088" />
-    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1604790209447">
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1604806623625">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="443" key="NewPhpFileDialog/-1824.36.1824.996/0.0.1920.1040@0.0.1920.1040" timestamp="1604790209447" />
+    <state x="794" y="443" key="NewPhpFileDialog/-1824.36.1824.996/0.0.1920.1040@0.0.1920.1040" timestamp="1604806623625" />
     <state x="-998" y="150" key="SettingsEditor" timestamp="1604706953430">
       <screen x="-1824" y="36" width="1824" height="996" />
     </state>

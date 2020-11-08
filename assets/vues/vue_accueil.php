@@ -39,9 +39,22 @@
                             ?>
                         </ul>
                     </li>
-                    <li><a href="assets/vues/vue_signup.php">S'inscrire</a></li>
-                    <li><a href="assets/vues/vue_login.php">Se connecter</a></li>
-                    <li><a href="assets/vues/vue_about.php">A propos ...</a></li>
+                    <?php
+                        $connecte = false;
+
+                        echo'<li><a href="assets/vues/vue_about.php">A propos</a></li>';
+
+                        if($connecte == true)
+                        {
+                            echo'<li><a href="assets/controllers/controlleur_creerarticle.php">Faire un article</a></li>';
+                            echo'<li><a href="assets/controllers/controlleur_logout.php">Se deconnecter</a></li>';
+                        }
+                        else {
+                            echo'<li><a href="assets/controllers/controlleur_login.php">Se connecter</a></li>';
+                            echo'<li><a href="assets/controllers/controlleur_signup.php">S\'inscrire</a></li>';
+                        }
+
+                    ?>
                 </ul>
             </nav>
 
